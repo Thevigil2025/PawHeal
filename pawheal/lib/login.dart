@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'createacc.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -51,7 +52,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-
+          
                 // Password Field
                 TextField(
                   obscureText: true,
@@ -64,7 +65,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 // Forgot Password
                 Container(
                   alignment: Alignment.centerRight,
@@ -105,7 +105,9 @@ class LoginPage extends StatelessWidget {
                   children: [
                     const Text("Don't have an account? "),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.pushNamed(context, '/createacc');
+                      },
                       child: const Text(
                         'Create one now',
                         style: TextStyle(
