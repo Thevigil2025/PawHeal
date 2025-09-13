@@ -1,0 +1,10 @@
+from sklearn.linear_model import LogisticRegression
+import joblib
+
+# Example training (replace with your dataset and model)
+X = [[0,0],[1,1],[2,2],[3,3]]
+y = [0,0,1,1]
+model = LogisticRegression().fit(X, y)
+
+# Save the model
+joblib.dump(model, "model/model.pkl")
